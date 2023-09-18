@@ -1,0 +1,12 @@
+{
+  "name": "sommy",
+  "version": "1.0.0",
+  "description": "My first blog with management system.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon server.js"
+  },
+  "author": "King Tony",
+  "license": "ISC"
+}

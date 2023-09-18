@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Chisom Mavis" />
+    <meta name="keywords" content="Life,Inspiration,Bible" />
+    <meta name="creator" content="King Tony Softwares" />
+    <meta name="publisher" content="Chisom Mavis" />
+    <link rel="stylesheet" href="./fontawesome-free-6.3.0-web/css/all.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="main.css" />
+    <title>Sommy | Admin</title>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <a href="../index.html">
+          <h2>Sommy <i class="fas fa-leaf"></i></h2>
+        </a>
+        <ul class="sidenav">
+          <i class="fas fa-close"></i>
+          <li><a href="../index.html">HOME</a></li>
+        </ul>
+        <i class="fas fa-bars"></i>
+      </nav>
+    </header>
+    <main>
+      <div class="alert hidden">
+        <div>
+          <p>❌</p>
+          <h3>Error</h3>
+        </div>
+        <p>Something bad happened!</p>
+      </div>
+      <section class="tools">
+        <ul>
+          <li><i class="fas fa-bold"></i></li>
+          <li><i class="fas fa-link"></i></li>
+          <li><i class="fas fa-underline"></i></li>
+          <li><i class="fas fa-list"></i></li>
+          <li><i class="fas fa-t"></i></li>
+        </ul>
+        <ul>
+          <li>
+            <i class="fas fa-square-plus"> </i>
+          </li>
+        </ul>
+        <div class="adding-container">
+          <ul>
+            <li data-id="addSubHead">Sub header</li>
+            <li data-id="addBody">Body</li>
+          </ul>
+        </div>
+      </section>
+      <section class="body">
+        <form action="">
+          <div class="image-container">
+            <img src="" alt="" />
+            <div class="image-input">
+              <i class="fas fa-image"></i>
+              <p>Upload image</p>
+              <input type="file" name="image" id="image" />
+            </div>
+          </div>
+          <section class="contents">
+            <label for="keywords">Keywords</label>
+            <input
+              type="text"
+              name="keywords"
+              id="keywords"
+              placeholder="E.g Life,Marriage,Inspiration...etc"
+            />
+            <label for="title">Title of article</label>
+            <textarea name="title" id="title"></textarea>
+            <label for="category">Category</label>
+            <select name="category" id="category">
+              <option value="life">Life</option>
+              <option value="inspiration">Inspiration</option>
+              <option value="marriage">Marriage</option>
+            </select>
+            <label for="introduction">Introduction</label>
+            <textarea name="introduction" id="introduction"></textarea>
+            <label for="su">Subtitle</label>
+            <textarea name="subtitle" id="subtitle"></textarea>
+            <label for="body">Body</label>
+            <textarea name="body" id="body"></textarea>
+          </section>
+          <button id="post">Post</button>
+        </form>
+      </section>
+    </main>
+    <script src="main.js"></script>
+  </body>
+</html>

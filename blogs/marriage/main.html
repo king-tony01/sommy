@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Google tag (gtag.js) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-51TKRN26GQ"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "G-51TKRN26GQ");
+    </script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <a href="index.html">
+          <h2>Sommy <i class="fas fa-leaf"></i></h2>
+        </a>
+        <ul class="sidenav">
+          <i class="fas fa-close"></i>
+          <li><a href="#">LIFE</a></li>
+          <li><a href="#">INSPIRATION</a></li>
+          <li><a href="#">MARRIAGE</a></li>
+          <li><a href="#">BIBLE</a></li>
+          <li><a href="#">ABOUT</a></li>
+        </ul>
+        <i class="fas fa-bars"></i>
+      </nav>
+    </header>
+    <main>
+      <section class="hero">
+        <h1>Life</h1>
+        <p>
+          Welcome to the Life section of our blog—a space dedicated to exploring
+          the essence of existence and celebrating the extraordinary journey we
+          all embark upon. Here, we dive deep into the realms of personal
+          growth, self-discovery, relationships, well-being, and the profound
+          lessons that life has to offer. Join us as we navigate the
+          complexities of everyday life, uncover hidden truths, and embrace the
+          beauty of being alive. Get ready to be inspired, challenged, and
+          empowered as we embark on this enriching exploration of what it truly
+          means to live a life of purpose, fulfillment, and joy. Welcome to the
+          vibrant tapestry of Life.
+        </p>
+      </section>
+      <section class="article-cards">
+        <a href="../../images/image-2.png"
+          ><div class="cards">
+            <img src="" alt="" />
+            <h3>Embracing the Magnificence of Life</h3>
+          </div></a
+        >
+        <a href=""
+          ><div class="cards">
+            <img src="" alt="" />
+            <h3>Embracing the Magnificence of Life</h3>
+          </div></a
+        >
+        <a href=""
+          ><div class="cards">
+            <img src="" alt="" />
+            <h3>Embracing the Magnificence of Life</h3>
+          </div></a
+        >
+        <a href=""
+          ><div class="cards">
+            <img src="" alt="" />
+            <h3>Embracing the Magnificence of Life</h3>
+          </div></a
+        >
+        <a href=""
+          ><div class="cards">
+            <img src="" alt="" />
+            <h3>Embracing the Magnificence of Life</h3>
+          </div></a
+        >
+      </section>
+    </main>
+    <footer>
+      <h2>Sommy <i class="fas fa-leaf"></i></h2>
+      <div class="socials">
+        <a href="https://www.facebook.com/king.tony01"
+          ><i class="fab fa-facebook"></i
+        ></a>
+        <a href="https://wa.me/message/GBGNUOAMMWOND1"
+          ><i class="fab fa-whatsapp"></i
+        ></a>
+        <a href="https://twitter.com/AmucheOkolie"
+          ><i class="fab fa-twitter"></i
+        ></a>
+        <a href="https://www.linkedin.com/in/king-tony-550087243"
+          ><i class="fab fa-linkedin"></i
+        ></a>
+      </div>
+      <div class="email">
+        <h4>NEWS LETTER</h4>
+        <small
+          >Get weekly news letter from me on inspirational talks, happy life
+          habit, peaceful marriage tips and many more life tips. Sign up to get
+          started.</small
+        >
+        <div class="email-input">
+          <i class="fas fa-envelope"></i>
+          <input
+            type="email"
+            name="email"
+            id="email"
+            placeholder="yours@mail.com"
+          />
+          <button type="submit" id="signup">Sign up</button>
+        </div>
+      </div>
+      <div class="navs">
+        <ul>
+          <li><h3>Imporant links</h3></li>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="./blogs/life/main.html">Life</a></li>
+          <li><a href="./blogs/inspiration/main.html">Inspiration</a></li>
+          <li><a href="./blogs/marriage/main.html">Marriage</a></li>
+        </ul>
+        <ul>
+          <li><h3>Contact</h3></li>
+          <li>
+            <a href="mailto:contact@kingtony.cloud"
+              ><i class="fas fa-envelope"></i> contact@kingtony.cloud</a
+            >
+          </li>
+          <li>
+            <a href="tel:23408145473583"
+              ><i class="fas fa-phone"></i> +234 8145 473 583</a
+            >
+          </li>
+        </ul>
+      </div>
+      <div class="copyright">
+        <small>Sommy &copy; 2023. All rights reserved.</small>
+      </div>
+    </footer>
+    <div class="modal"></div>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"
+    ></script>
+    <script type="text/javascript">
+      (function () {
+        emailjs.init("d5eCFA1WsuqV9JXOQ");
+      })();
+
+      const sendBtn = document.getElementById("send");
+      const signup = document.getElementById("signup");
+      const alertWindow = document.querySelector(".alert-window");
+      sendBtn.addEventListener("click", (e) => {
+        e.preventDefault();
+        const contactform = document.getElementById("contact");
+        if (
+          contactform.fullName.value == "" ||
+          contactform.email.value == "" ||
+          contactform.message.value == ""
+        ) {
+          alert("Please provide all fields");
+          return;
+        }
+        const templateParams = {
+          name: contactform.fullName.value,
+          userEmail: contactform.email.value,
+          message: contactform.message.value,
+        };
+
+        emailjs.send("contact_01", "sommy_template", templateParams).then(
+          function (response) {
+            console.log("SUCCESS!", response.status, response.text);
+            contactform.email.value = "";
+            contactform.message.value = "";
+            contactform.fullName.value = "";
+            toggleAlert();
+          },
+          function (error) {
+            console.log("FAILED...", error);
+          }
+        );
+      });
+      function toggleAlert() {
+        alertWindow.classList.add("active");
+        let timer = setTimeout(() => {
+          clearTimeout(timer);
+          alertWindow.classList.remove("active");
+          // toggleAlert();
+        }, 3000);
+      }
+      const newsLetter = document.getElementById("email");
+      const newsEmail = {
+        email: newsLetter.value,
+      };
+      signup.addEventListener("click", () => {
+        emailjs.send("contact_01", "newsletter", newsEmail).then(
+          function (response) {
+            console.log("SUCCESS!", response.status, response.text);
+            newsLetter.value = "";
+            toggleAlert();
+          },
+          function (error) {
+            console.log("FAILED...", error);
+          }
+        );
+      });
+    </script>
+    <script src="../script.js"></script>
+  </body>
+</html>

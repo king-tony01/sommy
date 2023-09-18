@@ -1,0 +1,518 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Nunito', sans-serif;
+}
+
+body {
+    background: #d7d7d7;
+}
+
+header {
+    width: 100%;
+    padding: 20px;
+    background: rgb(255, 235, 197);
+}
+
+header nav {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header h2 {
+    color: black;
+}
+
+header h2 .fa-leaf {
+    color: green;
+}
+
+header a {
+    text-decoration: none;
+}
+
+header nav ul li {
+    display: inline-block;
+    margin-right: 5px;
+}
+
+.fa-bars {
+    display: none;
+}
+
+.fa-close {
+    display: none;
+}
+
+header nav ul li a {
+    color: black;
+    display: block;
+    padding: 5px 0;
+    position: relative;
+}
+
+header nav ul li a::after {
+    content: "";
+    width: 0;
+    height: 3px;
+    background: linear-gradient(135deg, rgb(254, 213, 99), rgb(255, 179, 0));
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    transition: .3s all;
+    border-radius: 10px;
+}
+
+header nav ul li a:hover {
+    color: rgb(168, 106, 0);
+}
+
+header nav ul li a:hover::after {
+    width: 100%;
+}
+
+.divide {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+}
+
+.dot {
+    display: block;
+    width: 10px;
+    height: 10px;
+    margin: 4px;
+    background: rgb(186, 175, 157);
+    border-radius: 50%;
+}
+
+.hero{
+    padding: 50px;
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(../images/chef.png);
+    background-position: center;
+    background-size: cover;
+    margin: 20px auto;
+    border-radius: 20px;
+}
+
+.hero h1{
+    font-size: 40px;
+    font-weight: 800;
+    color: white;
+}
+
+.hero strong{
+    color: #ff9d00;
+    margin-top: 20px;
+    display: block;
+}
+
+.share-socials {
+    width: 100%;
+    padding: 10px 0;
+    display: flex;
+    align-items: center;
+}
+
+.share-socials a {
+    text-decoration: none;
+}
+
+.article-head {
+    padding: 10px 0;
+}
+
+.share-socials i:not(.fa-linkedin) {
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    color: white;
+    margin: 4px;
+}
+
+.fa-facebook {
+    background: rgb(0, 89, 255);
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    color: white;
+    margin: 4px;
+}
+
+.fa-twitter {
+    background: rgb(0, 94, 255);
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    color: white;
+    margin: 4px;
+}
+
+.fa-instagram {
+    background: linear-gradient(135deg, blue, rgb(253, 0, 220), red, orange, orange);
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    color: white;
+    margin: 4px;
+}
+
+.fa-linkedin {
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    color: blue;
+    background: white;
+    margin: 4px;
+}
+
+.fa-whatsapp {
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    color: white;
+    margin: 4px;
+    background: rgb(3, 149, 3);
+}
+
+main{
+    padding: 20px;
+}
+
+#introduction{
+    color: #ff9d00;
+    width: fit-content;
+    border-bottom: 2px solid green;
+    padding: 10px 0;
+}
+
+article{
+    margin: 20px auto;
+    max-width: 1000px;
+}
+
+article p{
+    color: rgb(67, 67, 67);
+}
+
+footer {
+    width: 100%;
+    background: #110b00;
+    padding: 30px;
+}
+
+footer h2 {
+    color: white;
+}
+
+footer h2 .fa-leaf {
+    color: green;
+}
+
+.socials {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.socials a {
+    text-decoration: none;
+}
+
+.email {
+    width: 100%;
+    margin: 10px 0;
+}
+
+.email h4 {
+    color: #ff9d00;
+}
+
+.email small {
+    display: block;
+    max-width: 400px;
+    color: #a7a5a5;
+    margin: 10px 0;
+}
+
+.email-input {
+    display: flex;
+    align-items: center;
+    width: fit-content;
+    background: white;
+    border-radius: 5px;
+    border: 1px solid #a7a5a5;
+}
+
+.email-input:focus-within {
+    border-color: #ff9d00;
+}
+
+.email-input .fa-envelope {
+    padding: 4px;
+    color: #a7a5a5;
+}
+
+.email-input input {
+    border: none;
+    font-size: 16px;
+    outline: none;
+}
+
+.email-input button {
+    padding: 7px;
+    font-size: 16px;
+    border: none;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    background: linear-gradient(135deg, rgb(254, 213, 99), rgb(255, 179, 0));
+    cursor: pointer;
+}
+
+.email-input button:hover {
+    background: #110b00;
+    color: white;
+}
+
+.navs {
+    margin-top: 10px;
+    display: flex;
+    align-items: flex-start;
+    width: 100%;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.navs ul li {
+    list-style: none;
+    padding: 3px;
+}
+
+.navs ul li h3 {
+    color: #ff9d00;
+}
+
+.navs ul li a {
+    text-decoration: none;
+    color: #a7a5a5;
+}
+
+.navs ul li a:hover {
+    text-decoration: underline;
+    color: white;
+}
+
+.copyright {
+    text-align: center;
+    color: rgb(185, 177, 177);
+}
+
+.modal {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.5);
+    top: 0;
+    left: 0;
+    transition: .5s all;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.modal.active {
+    opacity: 1;
+    pointer-events: all;
+}
+
+
+@media (max-width: 700px) {
+    .cards-container {
+        display: block;
+    }
+
+    .cards-container .card {
+        height: 200px;
+        margin: 10px 0;
+    }
+
+    .fa-bars {
+        display: flex;
+        width: 40px;
+        height: 40px;
+        border: 1px solid #ff9d00;
+        border-radius: 5px;
+        align-items: center;
+        justify-content: center;
+        font-size: 20px;
+        cursor: pointer;
+    }
+
+    .fa-close {
+        display: flex;
+        width: 40px;
+        height: 40px;
+        border: 1px solid #d7d7d7;
+        border-radius: 5px;
+        align-items: center;
+        justify-content: center;
+        font-size: 20px;
+        margin-left: auto;
+        cursor: pointer;
+    }
+
+    .sidenav {
+        width: 270px;
+        height: 100vh;
+        background: white;
+        padding: 10px;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+        position: fixed;
+        left: -300px;
+        top: 0;
+        z-index: 10;
+        transition: .5s all;
+    }
+
+    .sidenav.active {
+        left: 0;
+    }
+
+    .sidenav li {
+        display: block;
+        margin: 10px 0;
+    }
+
+    .hero{
+        padding: 10px;
+    }
+
+    .hero h1{
+        font-size: 30px;
+    }
+
+    .contact-box form .input-field{
+        min-width: unset;
+        width: 100%;
+    }
+}
+
+.contact{
+    margin: 20px auto;
+    max-width: 1000px;
+
+}
+
+.alert-window{
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(5px);
+    background: rgba(0, 0, 0, 0.2);
+    position: fixed;
+    left: 0;
+    top: 0;
+    display: none;
+    place-items: center;
+}
+
+.alert-window.active{
+    display: grid;
+}
+
+.alert-container{
+    min-width: 320px;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.alert-container .far{
+    font-size: 30px;
+    color: green;
+}
+
+.alert-container p{
+    font-size: 20px;
+    color: #424242;
+}
+
+.contact-box form .input-field{
+    display: inline-flex;
+    padding: 10px;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid white;
+    border-radius: 7px;
+    background: white;
+    margin: 5px 0;
+    min-width: 340px;
+}
+
+.contact-box form .input-field input{
+    border: none;
+    outline: none;
+    font-size: 16px;
+    font-weight: 600;
+    width: 100%;
+}
+
+.contact-box form .input-field .fas{
+    color: rgb(85, 85, 85);
+    margin-right: 10px;
+}
+
+.contact-box form textarea{
+    width: 100%;
+    padding: 5px;
+    height: 150px;
+    border-radius: 7px;
+    border: 1px solid white;
+    outline: none;
+    display: block;
+    resize: none;
+    margin: 5px 0;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.contact-box form textarea:focus{
+    border: 1px solid green;
+}
+
+.contact-box form .input-field:focus-within{
+    border: 1px solid green;
+}
+
+.contact-box form button{
+    display: inline-block;
+    padding: 10px 50px;
+    color: white;
+    font-weight: 600;
+    font-size: 16px;
+    border: none;
+    border-radius: 7px;
+    background: black;
+}
