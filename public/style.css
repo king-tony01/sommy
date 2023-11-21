@@ -78,7 +78,7 @@ header nav ul li a:hover::after{
 .hero{
     width: 90%;
     margin: 20px auto;
-    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.5)), url(./images/background.jpg);
+    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.5)), url(/images/background.jpg);
     background-size: cover;
     background-position: center;
     padding: 20px;
@@ -276,17 +276,17 @@ header nav ul li a:hover::after{
 }
 
 .cards-container .ins{
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(./images/chef.png);
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(/images/chef.png);
     background-position: center;
     background-size: cover;
 }
 .cards-container .mar{
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(./images/images-1.png);
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(/images/images-1.png);
     background-position: center;
     background-size: cover;
 }
 .cards-container .lif{
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(./images/image-2.png);
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(/images/image-2.png);
     background-position: center;
     background-size: cover;
 }

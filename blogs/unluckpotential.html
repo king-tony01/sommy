@@ -36,7 +36,7 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    <link rel="stylesheet" href="blogs.css" />
+    <link rel="stylesheet" href="/blogs/blogs.css" />
     <script
       async
       src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3642344338051190"
@@ -50,16 +50,14 @@
   <body>
     <header>
       <nav>
-        <a href="../index.html">
+        <a href="/">
           <h2>Sommy <i class="fas fa-leaf"></i></h2>
         </a>
         <ul class="sidenav">
           <i class="fas fa-close"></i>
-          <li><a href="#">LIFE</a></li>
-          <li><a href="#">INSPIRATION</a></li>
-          <li><a href="#">MARRIAGE</a></li>
-          <li><a href="#">BIBLE</a></li>
-          <li><a href="#">ABOUT</a></li>
+          <li><a href="/blogs/life/main.html">LIFE</a></li>
+          <li><a href="/blogs/inspiration/main.html">INSPIRATION</a></li>
+          <li><a href="/blogs/marriage/main.html">MARRIAGE</a></li>
         </ul>
         <i class="fas fa-bars"></i>
       </nav>
@@ -272,11 +270,10 @@
       <div class="navs">
         <ul>
           <li><h3>Imporant links</h3></li>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="life.html">Life</a></li>
-          <li><a href="inspiration.html">Inspiration</a></li>
-          <li><a href="marriage.html">Marriage</a></li>
-          <li><a href="bible.html">Bible</a></li>
+          <li><a href="/">Home</a></li>
+          <li><a href="/blogs/life/main.html">Life</a></li>
+          <li><a href="/blogs/inspiration/main.html">Inspiration</a></li>
+          <li><a href="/blogs/marriage/main.html">Marriage</a></li>
         </ul>
         <ul>
           <li><h3>Contact</h3></li>
@@ -296,73 +293,6 @@
         <small>Sommy &copy; 2023. All rights reserved.</small>
       </div>
     </footer>
-    <script
-      type="text/javascript"
-      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"
-    ></script>
-    <script type="text/javascript">
-      (function () {
-        emailjs.init("d5eCFA1WsuqV9JXOQ");
-      })();
-
-      const sendBtn = document.getElementById("send");
-      const signup = document.getElementById("signup");
-      const alertWindow = document.querySelector(".alert-window");
-      sendBtn.addEventListener("click", (e) => {
-        e.preventDefault();
-        const contactform = document.getElementById("contact");
-        if (
-          contactform.fullName.value == "" ||
-          contactform.email.value == "" ||
-          contactform.message.value == ""
-        ) {
-          alert("Please provide all fields");
-          return;
-        }
-        const templateParams = {
-          name: contactform.fullName.value,
-          userEmail: contactform.email.value,
-          message: contactform.message.value,
-        };
-
-        emailjs.send("contact_01", "sommy_template", templateParams).then(
-          function (response) {
-            console.log("SUCCESS!", response.status, response.text);
-            contactform.email.value = "";
-            contactform.message.value = "";
-            contactform.fullName.value = "";
-            toggleAlert();
-          },
-          function (error) {
-            console.log("FAILED...", error);
-          }
-        );
-      });
-      function toggleAlert() {
-        alertWindow.classList.add("active");
-        let timer = setTimeout(() => {
-          clearTimeout(timer);
-          alertWindow.classList.remove("active");
-          // toggleAlert();
-        }, 3000);
-      }
-      const newsLetter = document.getElementById("email");
-      const newsEmail = {
-        email: newsLetter.value,
-      };
-      signup.addEventListener("click", () => {
-        emailjs.send("contact_01", "newsletter", newsEmail).then(
-          function (response) {
-            console.log("SUCCESS!", response.status, response.text);
-            newsLetter.value = "";
-            toggleAlert();
-          },
-          function (error) {
-            console.log("FAILED...", error);
-          }
-        );
-      });
-    </script>
     <script src="../script.js"></script>
   </body>
 </html>

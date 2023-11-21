@@ -43,7 +43,8 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="/public/style.css" />
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
     <script
       async
       src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3642344338051190"
@@ -54,7 +55,7 @@
   <body>
     <header>
       <nav>
-        <a href="index.html">
+        <a href="/">
           <h2>Sommy <i class="fas fa-leaf"></i></h2>
         </a>
         <ul class="sidenav">
@@ -142,7 +143,7 @@
           <br />
           <a href="#" class="explore">Begin Your Journey</a>
         </div>
-        <div><img src="./images/intro.jpg" alt="" /></div>
+        <div><img src="/images/intro.jpg" alt="" /></div>
       </section>
       <br />
       <div class="divide">
@@ -169,17 +170,17 @@
       <section class="intro section">
         <b class="title">TOP POSTS</b>
         <div class="cards-container">
-          <a href="./blogs/inspiration/main.html"
+          <a href="/blogs/inspiration/main.html"
             ><div class="card ins">
               <h3>INSPIRATION</h3>
             </div></a
           >
-          <a href="./blogs/marriage/main.html"
+          <a href="/blogs/marriage/main.html"
             ><div class="card mar">
               <h3>MARRIAGE</h3>
             </div></a
           >
-          <a href="./blogs/life/main.html"
+          <a href="/blogs/life/main.html"
             ><div class="card lif">
               <h3>LIFE</h3>
             </div></a
@@ -195,9 +196,9 @@
       <section class="trending section">
         <b class="title"> TRENDING </b>
         <div class="trending-container">
-          <a href="./blogs/life01.html">
+          <a href="/blogs/life/life01.html">
             <div class="trending-card">
-              <img src="./images/image-3.png" alt="" />
+              <img src="/images/image-3.png" alt="" />
               <div>
                 <strong>10 Essential Habits for a Fulfilling Life</strong>
                 <small>
@@ -209,9 +210,9 @@
               </div>
             </div>
           </a>
-          <a href="./blogs/unluckpotential.html">
+          <a href="/blogs/unluckpotential.html">
             <div class="trending-card">
-              <img src="./images/chef.png" alt="" />
+              <img src="/images/chef.png" alt="" />
               <div>
                 <strong
                   >7 Key Strategies for Unlocking Your Full Potential and
@@ -302,16 +303,16 @@
       <div class="navs">
         <ul>
           <li><h3>Imporant links</h3></li>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="./blogs/life/main.html">Life</a></li>
-          <li><a href="./blogs/inspiration/main.html">Inspiration</a></li>
-          <li><a href="./blogs/marriage/main.html">Marriage</a></li>
+          <li><a href="/">Home</a></li>
+          <li><a href="/blogs/life/main.html">Life</a></li>
+          <li><a href="/blogs/inspiration/main.html">Inspiration</a></li>
+          <li><a href="/blogs/marriage/main.html">Marriage</a></li>
         </ul>
         <ul>
           <li><h3>Contact</h3></li>
           <li>
-            <a href="mailto:contact@kingtony.cloud"
-              ><i class="fas fa-envelope"></i> contact@kingtony.cloud</a
+            <a href="mailto:kingtony3825@gmail.com"
+              ><i class="fas fa-envelope"></i> kingtony3825@gmail.com</a
             >
           </li>
           <li>
@@ -326,43 +327,6 @@
       </div>
     </footer>
     <div class="modal"></div>
-    <script
-      type="text/javascript"
-      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"
-    ></script>
-    <script type="text/javascript">
-      (function () {
-        emailjs.init("d5eCFA1WsuqV9JXOQ");
-      })();
-      const signup = document.getElementById("signup");
-      const alertWindow = document.querySelector(".alert-window");
-
-      function toggleAlert() {
-        alertWindow.classList.add("active");
-        let timer = setTimeout(() => {
-          clearTimeout(timer);
-          alertWindow.classList.remove("active");
-          // toggleAlert();
-        }, 3000);
-      }
-      const newsLetter = document.getElementById("email");
-      const newsEmail = {
-        email: newsLetter.value,
-      };
-      signup.addEventListener("click", () => {
-        emailjs.send("contact_01", "newsletter", newsEmail).then(
-          function (response) {
-            console.log("SUCCESS!", response.status, response.text);
-            newsLetter.value = "";
-            toggleAlert();
-          },
-          function (error) {
-            console.log("FAILED...", error);
-          }
-        );
-      });
-    </script>
-    <script src="../script.js"></script>
-    <script src="script.js"></script>
+    <script src="/public/script.js"></script>
   </body>
 </html>
